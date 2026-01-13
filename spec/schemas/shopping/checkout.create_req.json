@@ -30,6 +30,10 @@
     },
     "payment": {
       "$ref": "payment.create_req.json"
+    },
+    "agent_identity": {
+      "$ref": "types/agent_identity.json",
+      "description": "Identity information for the AI agent initiating checkout. Enables merchants to apply agent-specific policies."
     }
   }
 }

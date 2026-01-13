@@ -101,6 +101,10 @@
       "$ref": "types/order_confirmation.json",
       "description": "Details about an order created for this checkout session.",
       "ucp_request": "omit"
+    },
+    "agent_identity": {
+      "$ref": "types/agent_identity.json",
+      "description": "Identity information for the AI agent initiating checkout. Enables merchants to apply agent-specific policies."
     }
   }
 }

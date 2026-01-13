@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ucp.dev/schemas/shopping/types/agent_identity.json",
+  "title": "Agent Identity",
+  "description": "Identity and verification information for the AI agent initiating the request.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "description": "Unique identifier for the agent instance."
+    },
+    "agent_name": {
+      "type": "string",
+      "description": "Human-readable name of the agent (e.g., 'ChatGPT', 'Claude')."
+    },
+    "platform_domain": {
+      "type": "string",
+      "format": "hostname",
+      "description": "Domain of the platform operating the agent."
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": [
+        "none",
+        "domain_verified",
+        "oauth",
+        "cryptographic"
+      ],
+      "description": "How the agent's identity was verified."
+    },
+    "user_authorization": {
+      "type": "string",
+      "enum": [
+        "explicit",
+        "implicit",
+        "delegated"
+      ],
+      "description": "How the user authorized this agent to act on their behalf."
+    }
+  }
+}
